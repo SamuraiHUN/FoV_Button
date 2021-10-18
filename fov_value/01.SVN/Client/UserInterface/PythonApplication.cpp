@@ -49,3 +49,16 @@ change to:
 
 
 
+		int fov_value = CPythonSystem::Instance().GetFovValue();
+		if (fov_value == 0)
+			s.SetPerspective(30.0f, fAspect, 100.0, fFarClip);
+		else if (fov_value == 1)
+			s.SetPerspective(60.0f, fAspect, 110.0, fFarClip - 100.0);
+		else if (fov_value == 2)
+			s.SetPerspective(70.0f, fAspect, 115.0, fFarClip - 110.0);
+		else if (fov_value == 3)
+			s.SetPerspective(85.0f, fAspect, 120.0, fFarClip - 120.0);
+		else if (fov_value == 4)
+			s.SetPerspective(100.0f, fAspect, 125.0, fFarClip - 130.0);
+		else
+			s.SetPerspective(30.0f, fAspect, 100.0, fFarClip);
