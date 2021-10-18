@@ -23,3 +23,5 @@ NULL,
 
 add before this:
 
+		{ "SetFovValue",				systemSetFovValue,				METH_VARARGS },
+		{ "GetFovValue",				systemGetFovValue,				METH_VARARGS },
